@@ -68,12 +68,12 @@ class CartProduct {
     thisCartProduct.dom.remove.addEventListener('click', function () {
       event.preventDefault();
       thisCartProduct.remove();
-      console.log('cliked remove');
+      //console.log('cliked remove');
     });
 
     thisCartProduct.dom.edit.addEventListener('click', function () {
       event.preventDefault();
-      console.log('cliked edit');
+      //console.log('cliked edit');
     });
   }
 

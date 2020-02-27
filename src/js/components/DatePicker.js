@@ -26,7 +26,7 @@ class DatePicker extends BaseWidget {
     thisWidget.maxDate = utils.addDays(thisWidget.minDate, settings.datePicker.maxDaysInFuture);
 
     const options = {
-      default: thisWidget.minDate,
+      defaultDate: thisWidget.minDate,
       minDate: thisWidget.minDate,
       maxDate: thisWidget.maxDate,
       locale: {
@@ -55,7 +55,7 @@ class DatePicker extends BaseWidget {
     return true;
   }
 
-  renderValue() {}
+  renderValue() { }
 
 }
 
