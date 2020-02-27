@@ -31,5 +31,9 @@
     "no-console": [
       "off"
     ]
+  },
+  "globals": {
+    "flatpickr": true,
+    "HourPicker": true
   }
 }
