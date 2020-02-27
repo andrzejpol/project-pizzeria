@@ -36,6 +36,12 @@ utils.serializeFormToObject = function (form) {
   return output;
 };
 
+utils.queryParams = function (params) {
+  return Object.keys(params)
+    .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(params[k]))
+    .join('&');
+};
+
 utils.convertDataSourceToDbJson = function () {
   const productJson = [];
   for (let key in dataSource.products) {
