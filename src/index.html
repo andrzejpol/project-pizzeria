@@ -19,11 +19,14 @@
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
-        <div class="logo">
+        <div class="#logo">
+          <!-- <href="#/main">-->
           <h1 class="logo__title"><span>Mamma</span>Mia!</h1>
           <h2 class="logo__subtitle">the best homemade Italian food</h2>
+          <!--</a>-->
         </div>
         <div class="main-nav">
+          <a href="#main">Home</a>
           <a href="#order">Order</a>
           <a href="#booking">Booking</a>
         </div>
@@ -65,6 +68,9 @@
   </header>
 
   <div id="pages">
+    <section id="main">
+      <div class="main-wrapper container"></div>
+    </section>
     <section id="order">
       <div id="product-list" class="product-list container"></div>
     </section>
@@ -72,6 +78,29 @@
       <div class="booking-wrapper container"></div>
     </section>
   </div>
+
+  <script id="temlate-main-page" type="text/x-handlebars-template">
+    <div class="main">
+      <div class="main-page-nav">
+        <div class="order select">
+          <a class="link" href="#/order">
+            <h1>Order online</h1>
+            <p>Delicious food delivered to your door</p>
+          </a>
+        </div>
+        <div class="booking">
+          <a class="link" href="#/booking">
+            <h1>Book a table</h1>
+            <p>Book a table today</p>
+          </a>
+        </div>
+        <div class="opening-hours">
+          <h1>Opening hours</h1>
+          <p>TUE-SUN, 12PM-12AM</p>
+        </div>
+      </div>
+    </div>
+  </script>
 
   <script id="template-booking-widget" type="text/x-handlebars-template">
     <div class="booking-widget">

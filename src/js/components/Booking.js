@@ -1,6 +1,11 @@
 /* eslint-disable linebreak-style */
 
-import { templates, select, settings, classNames } from '../settings.js';
+import {
+  templates,
+  select,
+  settings,
+  classNames
+} from '../settings.js';
 import utils from '../utils.js';
 import AmountWidget from './AmountWidget.js';
 import DatePicker from './DatePicker.js';
@@ -40,21 +45,17 @@ class Booking {
     // console.log('getData params', params);
 
     const urls = {
-      booking: settings.db.url + '/' + settings.db.booking
-        + '?' + params.booking.join('&'),
-      eventsCurrent: settings.db.url + '/' + settings.db.event
-        + '?' + params.eventsCurrent.join('&'),
-      eventsRepeat: settings.db.url + '/' + settings.db.event
-        + '?' + params.eventsRepeat.join('&'),
+      booking: settings.db.url + '/' + settings.db.booking +
+        '?' + params.booking.join('&'),
+      eventsCurrent: settings.db.url + '/' + settings.db.event +
+        '?' + params.eventsCurrent.join('&'),
+      eventsRepeat: settings.db.url + '/' + settings.db.event +
+        '?' + params.eventsRepeat.join('&'),
     };
 
     // console.log('getData urls', urls);
 
-    Promise.all([
-      fetch(urls.booking),
-      fetch(urls.eventsCurrent),
-      fetch(urls.eventsRepeat),
-    ])
+    Promise.all([fetch(urls.booking), fetch(urls.eventsCurrent), fetch(urls.eventsRepeat)])
       .then(function (allResponse) {
         const bookingsResponse = allResponse[0];
         const eventsCurrentResponse = allResponse[1];
@@ -140,8 +141,7 @@ class Booking {
     let allAvailable = false;
 
     if (
-      typeof thisBooking.booked[thisBooking.date] == 'undefined'
-      ||
+      typeof thisBooking.booked[thisBooking.date] == 'undefined' ||
       typeof thisBooking.booked[thisBooking.date][thisBooking.hour] == 'undefined'
     ) {
       allAvailable = true;
@@ -154,8 +154,7 @@ class Booking {
       }
 
       if (
-        !allAvailable
-        &&
+        !allAvailable &&
         thisBooking.booked[thisBooking.date][thisBooking.hour].includes(tableId)
       ) {
         table.classList.add(classNames.booking.tableBooked);
