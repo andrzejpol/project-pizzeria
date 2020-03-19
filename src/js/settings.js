@@ -1,12 +1,11 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-undef */
+/* global Handlebars */
 
 export const select = {
   templateOf: {
     menuProduct: '#template-menu-product',
     cartProduct: '#template-cart-product',
     bookingWidget: '#template-booking-widget',
-    mainPage: '#template-main-page',
+    mainPage: '#temlate-main-page',
   },
   containerOf: {
     menu: '#product-list',
@@ -14,7 +13,8 @@ export const select = {
     pages: '#pages',
     booking: '.booking-wrapper',
     main: '.main-wrapper',
-    s
+    carousel: '.carousel-content',
+    mark: '.carousel-mark',
   },
   all: {
     menuProducts: '#product-list > .product',
@@ -45,7 +45,6 @@ export const select = {
       output: '.output',
     },
   },
-
   cart: {
     productList: '.cart__order-summary',
     toggleTrigger: '.cart__summary',
@@ -60,7 +59,6 @@ export const select = {
   },
   cartProduct: {
     amountWidget: '.widget-amount',
-
     price: '.cart__product-price',
     edit: '[href="#edit"]',
     remove: '[href="#remove"]',
@@ -76,9 +74,7 @@ export const select = {
   },
   nav: {
     links: '.main-nav a',
-    linksMain: '.main-page-nav a',
   },
-
 };
 
 export const classNames = {
@@ -86,11 +82,9 @@ export const classNames = {
     wrapperActive: 'active',
     imageVisible: 'active',
   },
-
   cart: {
     wrapperActive: 'active',
   },
-
   booking: {
     loading: 'loading',
     tableBooked: 'booked',
@@ -101,6 +95,10 @@ export const classNames = {
   pages: {
     active: 'active',
   },
+  carousel: {
+    content: 'active',
+    mark: 'active',
+  }
 };
 
 export const settings = {
@@ -116,11 +114,9 @@ export const settings = {
   datePicker: {
     maxDaysInFuture: 14,
   },
-
   cart: {
     defaultDeliveryFee: 20,
   },
-
   booking: {
     tableIdAttribute: 'data-table',
   },
@@ -135,13 +131,14 @@ export const settings = {
     notRepeatParam: 'repeat=false',
     repeatParam: 'repeat_ne=false',
   },
+  carouselTime: {
+    time: 3000,
+  }
 };
 
 export const templates = {
   menuProduct: Handlebars.compile(document.querySelector(select.templateOf.menuProduct).innerHTML),
-
   cartProduct: Handlebars.compile(document.querySelector(select.templateOf.cartProduct).innerHTML),
-
   bookingWidget: Handlebars.compile(document.querySelector(select.templateOf.bookingWidget).innerHTML),
   mainPage: Handlebars.compile(document.querySelector(select.templateOf.mainPage).innerHTML),
 };
