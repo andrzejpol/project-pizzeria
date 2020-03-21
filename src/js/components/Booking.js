@@ -103,6 +103,7 @@ class Booking {
     // console.log('thisBooking.booked', thisBooking.booked);
 
     thisBooking.updateDOM();
+    thisBooking.hourPicker.updateBooking(thisBooking.booked);
   }
 
   makeBooked(date, hour, duration, table) {
