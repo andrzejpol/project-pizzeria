@@ -1,6 +1,6 @@
 # Project-pizzeria
 
-Web app for restaurant. You can book a table and order some pizza.
+Web app for restaurant made with HTML, SCSS, JS, Node.js. You can book a table and order some pizza.
 
 ## Installing
 
